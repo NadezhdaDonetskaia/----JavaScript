@@ -16,7 +16,43 @@
 //Если число было передано вне [0, 999] диапазона, не целое число или вообще не число,
 //необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
 
+class NumToObj {
+  constructor(num) {
+    function isNumber (n) {
+        return ! isNaN (n-0);
+    }
+    function isFloat (n) {
+        return n===+n && n!==(n|0);
+    }
 
+    if (isNumber(num)) {
+      if (num >= 0 && num <= 999) {
+        if (! isFloat(num)) {
+          this.units = num % 10;
+          this.tens = parseInt(num % 100 / 10);
+          this.hundereds = parseInt(num / 100);
+        }
+        else {
+        console.log('Число не целое')
+      }
+      }
+      else {
+        console.log('Число не в диапозоне 0-999')
+      }
+    }
+      else {
+        console.log('Это не число')
+      }
+  }
+}
+
+let num = new NumToObj(987);
+console.log(num);
+let a = new NumToObj('a');
+let b = new NumToObj(-1);
+let c = new NumToObj(1000);
+let d = new NumToObj(10.3);
+console.log(a, b, c, d);
 
 //1.1
 //(это обязательное задание) Сделайте в стиле es5, а затем в стиле es6 (по аналогии из дополнительных
