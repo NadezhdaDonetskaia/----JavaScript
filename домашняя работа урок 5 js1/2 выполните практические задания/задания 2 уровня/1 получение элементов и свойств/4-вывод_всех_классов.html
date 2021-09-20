@@ -16,7 +16,10 @@
      -->
 
     <script>
-        
+        'use strict';
+        let myDiv = document.getElementsByTagName('div')[0];
+        let classes = myDiv.classList;
+        classes.forEach(element => console.dir(element));
     </script>
 </body>
 </html>

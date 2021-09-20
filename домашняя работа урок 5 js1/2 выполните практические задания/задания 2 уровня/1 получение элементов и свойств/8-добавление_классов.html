@@ -19,6 +19,13 @@
     -->
 
     <script>
+        'use strict';
+        let myB = document.getElementsByTagName("b");
+        for(let i=0; i<myB.length; i++) {
+            if (! myB[i].classList.contains('sign')) {
+                myB[i].classList.add('sign');
+            }
+        }
         
     </script>
 </body>

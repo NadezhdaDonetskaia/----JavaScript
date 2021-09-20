@@ -13,5 +13,12 @@
     2. Затем обратитесь к списку классов и с помощью метода contains()
     проверьте есть ли класс hidden у этого тега.
      -->
+    <script>
+        'use strict';
+        let myDiv = document.getElementsByTagName('div')[0];
+        let classes = myDiv.classList;
+        console.dir(classes.contains('hidden'));
+
+    </script>
 </body>
 </html>
